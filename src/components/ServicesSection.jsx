@@ -1,4 +1,3 @@
-import img1 from "../assets/IMG_5055.jpg";
 
 const ServicesSection = () => {
   const services = [

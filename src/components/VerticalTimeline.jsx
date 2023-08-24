@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Timeline } from 'flowbite-react';
+import { Timeline } from 'flowbite-react';
 
 export default function VerticalTimeline() {
   return (

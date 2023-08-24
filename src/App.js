@@ -19,7 +19,6 @@ function App() {
     <div>
       <DefaultNavbar />
       <HeroSlider />
-      {/* <QCard imgAdd={img1} /> */}
       <Welcome />
       <VisionSection flip={true}
         imageSrc={visionImg}
