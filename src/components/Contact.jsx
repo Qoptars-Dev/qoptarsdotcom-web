@@ -1,3 +1,6 @@
+import whatsappLogo from "../assets/social-media/whatsapp.png";
+import instagramLogo from "../assets/social-media/instagram.png";
+import linkedinLogo from "../assets/social-media/linkedin.png";
 
 export default function Contact() {
   return (
@@ -10,18 +13,12 @@ export default function Contact() {
         Feel free to contact us.
       </h2>
       <div className="py-5 flex gap-4">
-        <img
-          className="w-10"
-          src="https://i.pinimg.com/originals/e6/85/55/e685555d3879dd2407d668086ee7208a.png"
-        />
-        <img
-          className="w-10"
-          src="https://static-00.iconduck.com/assets.00/social-instagram-icon-2048x2048-xuel0xhc.png"
-        />
-        <img
-          className="w-10"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/2048px-LinkedIn_icon.svg.png"
-        />
+        <a aria-label="Chat on WhatsApp Qoptars" href="https://wa.me/+919707114708?text=Hi,%20I'm%20interested%20to%20know%20more%20about%20your%20%20company." target="_blank" rel="noreferrer"> <img className="w-10" alt="Chat on WhatsApp Qoptars" src={whatsappLogo} />
+        </a>
+        <a aria-label="Instagram Qoptars" href="https://instagram.com/qoptars" target="_blank" rel="noreferrer"> <img className="w-10" alt="Qoptars Instagram" src={instagramLogo} />
+        </a>
+        <a aria-label="LinkedIn Qoptars" href="https://linkedin.com/company/qoptars" target="_blank" rel="noreferrer"> <img className="w-10" alt="Qoptars LinkedIn" src={linkedinLogo} />
+        </a>
       </div>
     </div>
   );

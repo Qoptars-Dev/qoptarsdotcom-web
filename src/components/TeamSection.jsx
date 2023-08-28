@@ -38,7 +38,7 @@ const TeamSection = () => {
             <div key={index} className="rounded-lg p-6 justify-center item-center">
               <img
                 src={member.image}
-                alt={`${member.name} Photo`}
+                alt={`${member.name} Qoptars`}
                 className="h-32 w-32 object-cover rounded-full mb-4 mx-auto"
               />
               <h3 className="text-xl text-center font-Mont font-light text-white mb-2">{member.name}</h3>

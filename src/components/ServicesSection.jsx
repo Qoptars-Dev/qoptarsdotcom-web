@@ -31,7 +31,7 @@ const ServicesSection = () => {
               <div className="relative overflow-hidden">
                 <img
                   src={service.image}
-                  alt={`${service.title} Image`}
+                  alt={`${service.title} Service`}
                   className="h-64 w-full object-cover rounded-t-lg"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black opacity-40"></div>
