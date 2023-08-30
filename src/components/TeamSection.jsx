@@ -1,6 +1,7 @@
-import suman from "../assets/IMG_1002.jpg";
-import manash from "../assets/man.jpg";
-import pritam from "../assets/pritam.jpg";
+import suman from "../assets/suman.webp";
+import manash from "../assets/man.webp";
+import pritam from "../assets/pritam.webp";
+
 const TeamSection = () => {
   const teamMembers = [
     {
