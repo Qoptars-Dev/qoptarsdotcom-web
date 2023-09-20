@@ -45,11 +45,11 @@ export default function VerticalTimeline() {
                 April 2022
             </Timeline.Time>
             <Timeline.Title className='text-gray-100 font-Mont font-medium'>
-                Built Our First MVP(Minimal Viable Product). Tested our MVP with several clients.
+                Built Our First MVP(Minimal Viable Product). 
             </Timeline.Title>
             <Timeline.Body>
                 <p className="text-gray-400">
-                Get started with dozens of web components and interactive elements built on top of Tailwind CSS.
+                Tested our MVP with several clients. We received valuable feedback that helped us to refine our product to better suit the market.
                 </p>
             </Timeline.Body>
             </Timeline.Content>
