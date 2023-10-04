@@ -1,7 +1,31 @@
+import { useEffect, useRef } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 export default function Welcome() {
+
+  const ref = useRef(null);
+  const inView = useInView(ref);
+  const control = useAnimation();
+
+  useEffect(() => {
+    if(inView) {
+      control.start("visible");
+    }
+    else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
   return (
-    <div
+    <motion.div 
+      ref={ref}
+      initial="hidden"
+      animate={control}
+      variants={{
+        visible: { opacity: 1},
+        hidden: { opacity: 0}
+      }}
+      transition={ { duration: 1 }}
       className="max-w-sm md:max-w-lg mx-auto my-6 text-center"
     >
         <h5 className="text-3xl md:text-5xl text-gray-100 font-Mont font-medium mb-4">
@@ -13,7 +37,7 @@ export default function Welcome() {
       <p className="font-normal px-6 text-gray-300">
         Discover the power of drone technology with Qoptars.
       </p>
-    </div>
+    </motion.div>
   )
 }
 

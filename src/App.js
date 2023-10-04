@@ -40,7 +40,7 @@ function App() {
         <VerticalTimeline />
         <InvestorsSection />
         <ClienteleSection />
-        <Contact />
+        <Contact text={"Feel free to contact us."} />
         <Footer />
     </div>
   );

@@ -1,12 +1,28 @@
+import { useEffect, useRef } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
+
 import suman from "../assets/suman.webp";
 import manash from "../assets/man.webp";
 import pritam from "../assets/pritam.webp";
 
 const TeamSection = () => {
+  const sref = useRef(null);
+  const container = useRef(null);
+  const inView = useInView(container, { margin: "400px"});
+  const control = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
   const teamMembers = [
     {
       name: 'Manash P',
-      designation: 'Founder & CEO',
+      designation: 'Co-Founder & CEO',
       email: 'manash@qoptars.com',
       linkedin: 'https://www.linkedin.com/in/manash-pratim-k-798966139',
       phone: '+919707114708',
@@ -14,7 +30,7 @@ const TeamSection = () => {
     },
     {
       name: 'Pritam B',
-      designation: 'Founder & CTO',
+      designation: 'Co-Founder & CTO',
       email: 'pritam@qoptars.com',
       linkedin: 'https://www.linkedin.com/in/pritam-basumatary-656228196',
       phone: '+919101066329',
@@ -22,7 +38,7 @@ const TeamSection = () => {
     },
     {
       name: 'Shekhar S',
-      designation: 'COO',
+      designation: 'Co-Founder & COO',
       email: 'shekhar@qoptars.com',
       linkedin: 'https://www.linkedin.com/in/shekhar-suman-kalita-936a8b1b9',
       phone: '+918638826738',
@@ -33,10 +49,28 @@ const TeamSection = () => {
   return (
     <section className="bg-gray-900 py-12">
       <div className="max-w-7xl place-items-center mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-Mont font-medium text-white mb-8 text-center">Team</h2>
+        <motion.h2
+                ref={container}
+                initial="hidden"
+                animate={control}
+                variants={{
+                  hidden: { opacity: 0},
+                  visible: { opacity: 1},
+                }}
+                transition={{ duration: 1 }} 
+        className="text-3xl font-Mont font-medium text-white mb-8 text-center">Team</motion.h2>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
           {teamMembers.map((member, index) => (
-            <div key={index} className="rounded-lg p-6 justify-center item-center">
+            <motion.div
+            ref={container}
+            initial="hidden"
+            animate={control}
+            variants={{
+              hidden: { opacity: 0, y: 100},
+              visible: { opacity: 1, y: 0},
+            }}
+            transition={{ duration: 1 }} 
+            key={index} className="rounded-lg p-6 justify-center item-center">
               <img
                 src={member.image}
                 alt={`${member.name} Qoptars`}
@@ -52,7 +86,7 @@ const TeamSection = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="white" viewBox="0 0 24 24"><path d="M0 0v24h24v-24h-24zm8 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.397-2.586 7-2.777 7 2.476v6.759z"/></svg>
                 </a>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
