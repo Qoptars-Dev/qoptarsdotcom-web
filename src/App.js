@@ -9,8 +9,8 @@ import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import VerticalTimeline from "./components/VerticalTimeline";
 import GallerySection from "./components/GallerySection";
-import airsonic from "./assets/airsonic.jpeg";
-import visionImg from "./assets/vision.jpg";
+import airsonic2 from "./assets/airsonic.webp";
+import vision2 from "./assets/vision.webp";
 import InvestorsSection from "./components/InvestorsSection";
 import ClienteleSection from "./components/ClienteleSection";
 
@@ -21,14 +21,14 @@ function App() {
       <HeroSlider />
       <Welcome />
       <VisionSection flip={true}
-        imageSrc={visionImg}
+        imageSrc={vision2}
         imageAlt="vayu-drone"
         title="Our Vision"
         text1="We're revolutionizing the drone industry with cutting-edge technology and design."
         text2="At Qoptars, we specialize in manufacturing quadcopters that are not only efficient but also easy to use. Our mission is to provide our customers with the best possible drone experience."
         />
         <ProductSection flip={false} 
-          imageSrc={airsonic}
+          imageSrc={airsonic2}
           imageAlt={"airsonics"}
           title={"Our Products"}
           text1={"We have two products currently on the market: AirSonic and AirCine. "}
@@ -40,7 +40,7 @@ function App() {
         <VerticalTimeline />
         <InvestorsSection />
         <ClienteleSection />
-        <Contact />
+        <Contact text={"Feel free to contact us."} />
         <Footer />
     </div>
   );

@@ -1,11 +1,11 @@
-import image1 from "../assets/IMG_5055.jpg";
-import image2 from "../assets/LYD03263.jpeg";
+import image1 from "../assets/IMG_5055.webp";
+import image2 from "../assets/LYD03263.webp";
 
 import { Carousel } from "flowbite-react";
 
 export default function HeroSlider() {
   return (
-    <Carousel slide={false} className="h-[70vh] md:h-[90vh] mb-10">
+    <Carousel slide={true} slideInterval={3500} className="h-[70vh] md:h-[90vh] mb-10">
       <div className="h-full">
         <img src={image1} alt="AirSonic S FPV" className="h-full w-full object-cover" />
         <div className="absolute top-1/2 left-1/2 block w-full -translate-x-1/2 -translate-y-1/2 text-gray-200 text-5xl md:text-7xl text-bold text-center font-Mont font-medium">
